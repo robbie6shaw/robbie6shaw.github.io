@@ -1,0 +1,227 @@
+var(--sidebar-size, 300px)
+
+/* r-shaw top left logo */
+#webname {
+    padding: 20px 10% 0 10%;
+}
+
+@media (max-width:720px){
+    
+    /* Hides Sidebar */
+    #sidebar{
+        display:none;
+    }
+    
+    /* Pushes Content Down */
+    main{
+         padding-top: 70px;
+    }
+    
+    #profile {
+        margin-top: 10px;
+        margin-bottom:10px;
+    }  
+    
+    /* Sets Navbar Settings */ 
+    .dark_grey {
+        background-color: #6e6e6e;
+        border-radius: 38px;
+        margin: 10px;
+    }
+    
+    .mob_roundel{
+    height: 70px;
+    }
+    
+    /* Sets Navbar Link Settings */
+    #mob_navbar a{
+        font-family: Josefin Sans;
+        color: white;
+        text-decoration: none !important;
+    }
+    
+    /* Decrease table text size to stop big issues */
+    .site_cell h5{
+        font-size: 1rem;
+    }
+    
+    /* Adds side paddding - For some reason fixes side scroll issue */
+    body{
+        padding: 20px 20px 0 20px;
+    }
+    
+    /*Corrects Footer left sideness */
+    footer{
+        left: 0;
+        right: 0;
+    }
+    
+
+}
+
+@media (min-width:721px){
+    /* Configuration for sidebar */
+    #sidebar{
+        position: fixed;
+        border-right: 3px solid #b8b8b8;
+        -ms-flex: 0 0 300px;
+        flex: 0 0 300px;
+        left: 0px;
+        top: 0px;
+        max-width:300px;
+        height: 100%;
+        font-family: Josefin Sans, sans-serif;
+        color: #6e6e6e;
+        z-index: 1000;
+        
+    }
+    
+    /* Sidebar Links */
+    #sidebar a{
+        color: #6e6e6e;
+        text-decoration: none !important;
+        font-weight: 400;
+        
+    }
+    /* Nav Links */
+    .nav-item a{
+        font-size: 15pt;
+    }
+    
+    /* Configuration for the social media icons on the bottom of the sidebar */
+    #socials {
+        line-height: 20px;
+        vertical-align: bottom;
+        padding: 20px 0px;
+        bottom: 120px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 300px; 
+    }
+    
+    /*Configures Sidebar Icons*/
+    #sidebar .icon {
+        height: 20px;
+        vertical-align: middle;
+        margin: 10px 0px;
+
+        }
+    
+    /*Shoves content over to stop overlap with sidebar */
+    #content{
+        padding-left: 300px;
+        padding-top: 10px;
+    }
+    
+    /* Adds a bit of padding to main text*/
+    main{
+        padding-left: 20px;
+        padding-right: 20px;   
+    }
+    
+    
+    /*Hides the mobile nav bar */
+    #mob_navbar{
+        display: none;
+    }
+    
+    /*Shoves footer over to stop overlap with sidebar */
+    footer{
+        width: calc(100% - 300px);
+    }
+}
+
+
+
+/* Configures Pic on Homepage */
+#profile {
+    border-radius: 100%;
+    height: 250px;
+    border: solid #b8b8b8 3px;
+    
+}
+
+/* Configures center image class */
+img.center {
+    display: block;
+    margin: 0px auto;
+    
+}
+
+/* Configures headers */ 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Josefin Sans;
+    color: #6e6e6e;
+    margin: 0.5em 0px;
+    font-weight: 600 !important ;
+}
+
+/* Sets Default Font */
+body{
+    font-family: Noto Sans;
+}
+
+/* Aligment for standard paragraphs */
+p{
+    text-align: justify;
+}
+
+
+.mob_title{
+    margin: 0px;
+    padding-top: 5px;
+}
+
+/* Configuration for On Other Sites Link Table */
+#content .icon {
+    width:100px;
+}
+
+td {
+    padding: 10px;
+}
+
+table {
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+
+.icon_cell {
+    width: 100px;
+    
+}
+
+.site_cell {
+    width:250px;
+}
+
+table a{
+    text-decoration-color: #6e6e6e !important;
+}
+
+/*Formats Footer */
+
+footer {
+    position: absolute;
+    font-size: 11pt;
+    bottom: 0;
+    line-height: 16pt;
+    height: 96pt;
+    padding-top: 16pt;
+    padding-bottom: 16pt;
+    border-top: 2pt solid #b8b8b8;
+    font-family: Josefin Sans, sans-serif;
+    color: #6e6e6e;
+}
+
+/* Allows the footer to work */
+#content {
+    position: relative;
+    min-height: calc(100vh - 20px);
+}
+
+main{
+    padding-bottom: 116pt;
+}
