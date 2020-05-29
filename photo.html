@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Creates Title -->
+        <title>
+            r-shaw.com - Photos
+        </title>
+
+        <!-- Sets the charachter set to UTF-8-->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Loads Bootstrap CSS Library-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+
+        <!-- Load Personal CSS Stylesheet-->
+        <link rel="stylesheet"
+            href="./style.css" />
+
+
+        <!-- Load Fonts (Joesfin Sans - Titles, Noto Sans - Standard-->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Navbar shown when width at or under 720px -->
+        <div id="mob_navbar" class="fixed-top">
+            <nav class="navbar mob_roundel navbar-dark dark_grey">
+                <h1 class="pl-2 mob_title"><a href="index.html">r-shaw</a></h1>
+                <button class="navbar-toggler pr-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div id="topnav" class="dark_grey p-4 text-center">
+                    <!-- Handlebars Inserts In Here -->
+                </div>
+            </div>
+        </div>
+
+        <!--- Sidebar shown when width over 720px -->
+        <div id="sidebar" class="col sidebar">
+            <div class="text-center">
+                <div id="webname">
+                    <a href="index.html"><h1>r-shaw</h1></a>
+                </div>
+                <div id="sidenav">
+                    <!-- Handlebars Inserts In Here -->
+                </div>
+                <div id="socials">
+                    <img class="icon" src="icons/snapchat.svg"/> - robbie6shaw  <br>
+                    <a href="https://www.instagram.com/robbie6shaw/"><img class="icon" src="icons/instagram.svg"/> - robbie6shaw</a> <br>
+                    <a href="mailto:robbie_shaw@outlook.com"><img class="icon" src="icons/email.svg"/> - robbie_shaw@outlook.com </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="content">
+             <main>
+                <h1 class="text-center">
+                    Photos
+                </h1>
+                <p class="text-center">
+                    Links to the various photo albums made from photos I have taken.
+                </p>
+            </main>
+            <footer class="text-center">
+                r-shaw.com <br>
+                &copy; Robbie Shaw 2020 <br>
+                Any bugs or feedback about the website? Email <a href="mailto:robbie_shaw+web@outlook.com">robbie_shaw+web@outlook.com</a> <br>
+                Social Media Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel Perfect">Pixel Perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+            </footer>
+        </div>
+
+
+
+
+        <!-- JS for Bootstrap: jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+        <!-- Links Handlebars Template -->
+        <script id="nav-elements" type="text/x-handlebars-template">
+            <ul class="nav flex-column">
+                {{#each links}}
+                <li class="nav-item">
+                    <a href="{{url}}" class="nav-link">{{name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+
+        <!-- Javascript filling in links -->
+        <script src="navbar.js"></script>
+
+    </body>
+
+</html>

@@ -12,6 +12,10 @@ var navigation = {"links":
             "url":"othersites.html",
             name:"On Other Sites"
         },
+        {
+            "url":"photo.html",
+            "name":"Photos"
+        }
         
 ]};
 
