@@ -225,3 +225,41 @@ footer {
 main{
     padding-bottom: 116pt;
 }
+
+.card{
+    position: flex;
+    margin: 20px 0;
+}
+.card-image {
+    width: 200px;
+    border-radius: 4px;
+}
+
+.card-body {
+    width: calc(100% - 200px);
+    margin: auto;
+
+}
+
+@media (min-width:721px) and (max-width:850px){
+    .card-image{
+        display: none;
+    }
+    .card-body{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px){
+    .card-image{
+        display:none;
+    }
+    .card-body{
+        width:100%;
+    }
+}
+
+.card {
+    font-family: Josefin Sans, sans-serif;
+}
+
