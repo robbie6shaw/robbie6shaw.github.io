@@ -5,7 +5,7 @@ var navigation = {"links":
             "name":"About"
         },
         {
-            "url":"https://www.notion.so/rshaw/School-Notes-882d824f9d3b4d30945a25c5b2dbdc1e",
+            "url":"https://rshaw.notion.site/subject-notes?pvs=4",
             "name":"Notes"
         },
         {
