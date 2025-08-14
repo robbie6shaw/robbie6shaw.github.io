@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script src="/assets/packages/masonry.pkgd.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Album</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- Masonry JS (optional imagesLoaded for layout fix) -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+</head>
+<body>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector('.photo-grid');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.pcard',
+        percentPosition: true,
+        gutter: 10
+      });
+    });
+  });
+
+  // Optional: Initialize Fancybox (auto for [data-fancybox] links)
+  Fancybox.bind("[data-fancybox]", {});
+  </script>
+
+  <header class="site-header">
+  <nav>
+    <h2>r shaw</h2>
+    <ul class="nav-list">
+      <li><a href="/.">Home</a></li>
+      <li><a href="https://notes.r-shaw.com/">Notes</a></li>
+      <li><a href="/album">Album</a></li>
+      <li><a href="/science">Science</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <h2> Photo Album </h2>
+  <main>
+    <!-- <section class="projects-filter">
+  <ul>
+    <li><a href="#">Notes</a></li>
+    <li><a href="#">Patrimoine</a></li>
+    <li><a href="#">Logements</a></li>
+    <li><a href="#">Ateliers & bureaux</a></li>
+    <li><a href="#">Équipement</a></li>
+    <li><a href="#">Architectures flottantes</a></li>
+  </ul>
+</section> -->
+
+<section class="photo-grid">
+  
+    <div class="pcard">
+      <a href="/images/tou1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/tou1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/tou1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Toulouse, FRA </span> <span class="right"> Jun 2025 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/tou2.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/tou2.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/tou2.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Toulouse, FRA </span> <span class="right"> Jun 2025 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/ber1.png" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/ber1.png');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/ber1.png" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Berlin, DEU </span> <span class="right"> Feb 2025 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/oxf1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/oxf1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/oxf1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Standlake, ENG </span> <span class="right"> May 2024 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/wal1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/wal1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/wal1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Dolgellau, WAL </span> <span class="right"> May 2024 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/cot2.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/cot2.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/cot2.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Minster Lovell, ENG </span> <span class="right"> Apr 2024 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/sto1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/sto1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/sto1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Stockholm, SWE </span> <span class="right"> Mar 2024 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/cot1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/cot1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/cot1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Bibury, ENG </span> <span class="right"> Sep 2023 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/luc1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/luc1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/luc1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Lucca, IT </span> <span class="right"> Jun 2023 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/luc2.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/luc2.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/luc2.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Lucca, ITA </span> <span class="right"> Jun 2023 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/kem1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/kem1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/kem1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Kemback, SCO </span> <span class="right"> May 2023 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/sta1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/sta1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/sta1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> St Andrews, SCO </span> <span class="right"> Oct 2021 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/sta2.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/sta2.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/sta2.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> St Andrews, SCO </span> <span class="right"> Oct 2021 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/skye1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/skye1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/skye1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Broadford, SCO </span> <span class="right"> Jun 2021 </span> </div></a>
+    </div>
+  
+    <div class="pcard">
+      <a href="/images/mal1.jpg" data-fancybox="gallery">
+      <!-- <div class="pcard-image" style="background-image: url('/images/mal1.jpg');" loading="lazy" alt="Gallery Image" ></div> -->
+      <img src="/images/mal1.jpg" alt="Gallery Image" />
+      <div class="pcard-description">
+      <span class="left"> Valleta, MLT </span> <span class="right"> Oct 2018 </span> </div></a>
+    </div>
+  
+</section>
+
+
+  </main>
+</body>
+  <footer class="site-footer">
+  <p>© 2025 Robbie Shaw <br> Hosted on Github Pages</p>
+</footer>
+
+</html>

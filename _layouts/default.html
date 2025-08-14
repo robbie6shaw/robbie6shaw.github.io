@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script src="/assets/packages/masonry.pkgd.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- Masonry JS (optional imagesLoaded for layout fix) -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+</head>
+<body>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector('.photo-grid');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.pcard',
+        percentPosition: true,
+        gutter: 10
+      });
+    });
+  });
+
+  // Optional: Initialize Fancybox (auto for [data-fancybox] links)
+  Fancybox.bind("[data-fancybox]", {});
+  </script>
+
+  {% include header.html %}
+  <h2> {{page.title}} </h2>
+  <main>
+    {{ content }}
+  </main>
+</body>
+  {% include footer.html %}
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<script src="/assets/packages/masonry.pkgd.min.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Science</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- Masonry JS (optional imagesLoaded for layout fix) -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+  
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+
+</head>
+<body>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector('.photo-grid');
+    imagesLoaded(grid, function () {
+      new Masonry(grid, {
+        itemSelector: '.pcard',
+        percentPosition: true,
+        gutter: 10
+      });
+    });
+  });
+
+  // Optional: Initialize Fancybox (auto for [data-fancybox] links)
+  Fancybox.bind("[data-fancybox]", {});
+  </script>
+
+  <header class="site-header">
+  <nav>
+    <h2>r shaw</h2>
+    <ul class="nav-list">
+      <li><a href="/.">Home</a></li>
+      <li><a href="https://notes.r-shaw.com/">Notes</a></li>
+      <li><a href="/album">Album</a></li>
+      <li><a href="/science">Science</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <h2> Science </h2>
+  <main>
+    <section class="impact">
+Sorry, this page is still in development. Check back later.
+</section>
+
+  </main>
+</body>
+  <footer class="site-footer">
+  <p>© 2025 Robbie Shaw <br> Hosted on Github Pages</p>
+</footer>
+
+</html>

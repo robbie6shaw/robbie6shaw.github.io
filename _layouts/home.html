@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+</head>
+<body>
+  <!-- {% include header.html %} -->
+  <div class="container">
+    <h2> Robbie Shaw </h2>
+    <main>
+      {{ content }}
+    </main>
+  </div>
+</body>
+  {% include footer.html %}
+</html>
