@@ -56,8 +56,6 @@ def main():
 
         output_path_base = os.path.join(OUTPUT_DIR, name)
         optimize_image(input_path, output_path_base)
-    
-    print("Job Done")
 
 
 if __name__ == "__main__":
