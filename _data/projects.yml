@@ -1,46 +1,46 @@
 featured:
   - title: Toulouse, FRA
     description: Jun 2025
-    image: /images/tou1.jpg
+    image: tou1
   - title: Toulouse, FRA
     description: Jun 2025
-    image: /images/tou2.jpg
+    image: tou2
   - title: Berlin, DEU
     description: Feb 2025
-    image: /images/ber1.png
+    image: ber1
   - title: Standlake, ENG
     description: May 2024
-    image: /images/oxf1.jpg
+    image: oxf1
   - title: Dolgellau, WAL
     description: May 2024
-    image: /images/wal1.jpg
+    image: wal1
   - title: Minster Lovell, ENG
     description: Apr 2024
-    image: /images/cot2.jpg
+    image: cot2
   - title: Stockholm, SWE
     description: Mar 2024
-    image: /images/sto1.jpg
+    image: sto1
   - title: Bibury, ENG
     description: Sep 2023
-    image: /images/cot1.jpg
+    image: cot1
   - title: Lucca, IT
     description: Jun 2023
-    image: /images/luc1.jpg
+    image: luc1
   - title: Lucca, ITA
     description: Jun 2023
-    image: /images/luc2.jpg
+    image: luc2
   - title: Kemback, SCO
     description: May 2023
-    image: /images/kem1.jpg
+    image: kem1
   - title: St Andrews, SCO
     description: Oct 2021
-    image: /images/sta1.jpg
+    image: sta1
   - title: St Andrews, SCO
     description: Oct 2021
-    image: /images/sta2.jpg
+    image: sta2
   - title: Broadford, SCO
     description: Jun 2021
-    image: /images/skye1.jpg
+    image: skye1
   - title: Valleta, MLT
     description: Oct 2018
-    image: /images/mal1.jpg
+    image: mal1

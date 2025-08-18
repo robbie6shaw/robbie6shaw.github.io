@@ -19,7 +19,10 @@ title: Photo Album
     <div class="pcard">
       <a href="{{ project.image | relative_url}}" data-fancybox="gallery">
       <!-- <div class="pcard-image" style="background-image: url('{{ project.image | relative_url }}');" loading="lazy" alt="Gallery Image" ></div> -->
-      <img src="{{ project.image | relative_url}}" alt="Gallery Image">
+      <picture>
+        <source srcset="/images/{{ project.image | relative_url}}.webp" type="image/webp">
+        <img src="/images/{{ project.image | relative_url}}.jpg" alt="Gallery Image" loading="lazy">
+      </picture>
       <div class="pcard-description">
       <span class="left"> {{ project.title }} </span> <span class="right"> {{ project.description }} </span> </div></a>
     </div>
