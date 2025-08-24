@@ -5,6 +5,19 @@
   --black: #000;
   --grey: #83847e;
   --accent: rgb(0, 127, 127);
+  --font-scale: 1;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --font-scale: 0.5;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --font-scale: 0.4;
+  }
 }
 
 * { margin:0; padding:0; box-sizing:border-box;}
@@ -19,14 +32,14 @@ body {
   color: var(--foreground); 
   line-height:1.6; 
   background-color: var(--background); 
-  margin:2rem;
+  margin: 0em 2rem;
   display: flex;
   flex-direction:column;
   min-height: 100vh;
 };
 
 .site-header { text-align: center; padding: 2rem; }
-.site-header nav {display: flex; align-items:center; justify-content: space-between; gap: 2rem; }
+.site-header nav {display: flex; align-items:center; justify-content: space-between; gap: 2rem; margin-top: 2rem;}
 .nav-list, .social-list { list-style: none; display:inline-flex; gap:1rem; margin-bottom: 1rem; }
 
 .nav-list li a,
@@ -35,7 +48,7 @@ body {
   margin: auto 2rem;
   font-family: Geist Mono, mono;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: calc(var(--font-scale) * 1.5rem);
 }
 
 .nav-list li a,
@@ -71,13 +84,28 @@ body {
 }
 
 
-h1 { font-size:6rem; margin-bottom:0.5rem;letter-spacing: -4px; font-weight:800}
+/* h1 { font-size: calc(var(--font-scale) * 6rem); margin-bottom:0.5rem;letter-spacing: -4px; font-weight:800} */
 
-h2 { font-size:10rem; margin-bottom:0.5rem; letter-spacing: -4px; font-weight:800; color: var(--accent); text-align: right; margin-right:2rem; text-transform: lowercase;}
+h2 { 
+  font-size: calc(var(--font-scale) * 8rem); 
+  margin: 0rem 2rem 0.5rem 0rem; 
+  letter-spacing: -4px; 
+  font-weight:800; 
+  color: var(--accent); 
+  text-align: right; 
+  text-transform: lowercase;
 
-h3 { font-size:1.5rem; color:#666; }
+}
 
-.site-header h2 {font-size: 1.6rem; letter-spacing: -1px; text-align:left; margin: 0 0 1rem 1.5rem;}
+/* h3 { font-size:1.5rem; color:#666; } */
+
+.site-header h2 {
+  font-size: calc(var(--font-scale) * 1.6rem); 
+  letter-spacing: -1px; 
+  text-align:left; 
+  margin: 0 0 1rem 1.5rem;
+
+}
 
 .container {
   max-width: 1200px;   /* or any value you prefer */
@@ -87,7 +115,7 @@ h3 { font-size:1.5rem; color:#666; }
 
 .impact {
   font-family: Geist Mono, mono;
-  font-size: 2rem;
+  font-size: calc(var(--font-scale) * 2rem);
   font-weight: 400;
   padding: 24px 0px;
 }
@@ -100,57 +128,13 @@ h3 { font-size:1.5rem; color:#666; }
 
 .impact-links {
   font-family: Geist Mono, mono;
-  font-size: 2rem;
+  font-size: calc(var(--font-scale) * 2rem); 
   font-weight: 600;
   list-style: none;
 }
 
-.three-buttons {
-  display: flex;
-  width: 100%;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.square-btn {
-  flex: 1 1 0;
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  font-size: 1.5rem;
-  border: 2px dashed var(--foreground);
-  background: var(--background);
-  color: var(--foreground);
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background 0.2s;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Geist Mono, mono;
-  font-size: 1rem;
-  font-weight: 400;
-  margin: 2%;
-}
-
-.square-btn:hover {
-  color: var(--accent);
-  border: 2px dashed var(--accent);
-}
-
-.square-btn .heading{
-  display: block;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.square-btn .desc{
-  display: block;
-}
-
-.projects-filter ul { display:flex; justify-content:center; gap:1.5rem; margin:2rem 0; list-style:none; }
-.projects-filter a { text-decoration:none; color:#333; font-weight:bold; }
+/* .projects-filter ul { display:flex; justify-content:center; gap:1.5rem; margin:2rem 0; list-style:none; }
+.projects-filter a { text-decoration:none; color:#333; font-weight:bold; } */
 
 
 .photo-grid {
@@ -182,33 +166,22 @@ h3 { font-size:1.5rem; color:#666; }
   .pcard {
     width: calc(50% - 20px);
   }
-  h2 {
-    font-size: 6rem;
-  }
-  .impact {
-    font-size: 1rem;
-  }
-  .impact-links {
-    font-size: 1rem;
-  }
   :root {
     --fancybox-button-size: 48px; /* default is 36px */
   }
   .nav-list li a,
   .social-list li a {
     margin: auto 0.6rem;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
   }
-  .site-header h2 { font-size: 0.9rem;}
+  /* .site-header h2 { font-size: 0.9rem;} */
 }
 
 @media (max-width: 650px) {
   .pcard {
     width: 100%;
   }
-  h2 {
-    font-size: 4rem
-  }
+
   :root {
     --fancybox-button-size: 48px; /* default is 36px */
   }
