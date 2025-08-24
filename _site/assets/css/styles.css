@@ -6,6 +6,7 @@
   --grey: #83847e;
   --accent: rgb(0, 127, 127);
   --font-scale: 1;
+  font-size:medium;
 }
 
 @media (max-width: 1000px) {
@@ -17,6 +18,7 @@
 @media (max-width: 650px) {
   :root {
     --font-scale: 0.4;
+    font-size: small;
   }
 }
 
@@ -30,7 +32,7 @@ html, body {
 body { 
   font-family: Geist, serif; 
   color: var(--foreground); 
-  line-height:1.6; 
+  line-height: 1.6; 
   background-color: var(--background); 
   margin: 0em 2rem;
   display: flex;
@@ -40,7 +42,7 @@ body {
 
 .site-header { text-align: center; padding: 2rem; }
 .site-header nav {display: flex; align-items:center; justify-content: space-between; gap: 2rem; margin-top: 2rem;}
-.nav-list, .social-list { list-style: none; display:inline-flex; gap:1rem; margin-bottom: 1rem; }
+.nav-list, .social-list { list-style: none; display:inline-flex; gap:0rem; margin-bottom: 1rem; }
 
 .nav-list li a,
 .social-list li a {
@@ -89,7 +91,7 @@ body {
 h2 { 
   font-size: calc(var(--font-scale) * 8rem); 
   margin: 0rem 2rem 0.5rem 0rem; 
-  letter-spacing: -4px; 
+  letter-spacing: calc(var(--font-scale) * -4px);
   font-weight:800; 
   color: var(--accent); 
   text-align: right; 
@@ -101,7 +103,7 @@ h2 {
 
 .site-header h2 {
   font-size: calc(var(--font-scale) * 1.6rem); 
-  letter-spacing: -1px; 
+  letter-spacing: calc(var(--font-scale) * -1px); 
   text-align:left; 
   margin: 0 0 1rem 1.5rem;
 
