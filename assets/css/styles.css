@@ -9,7 +9,7 @@
   font-size:medium;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   :root {
     --font-scale: 0.5;
   }
@@ -20,7 +20,7 @@
     --font-scale: 0.4;
     font-size: small;
   }
-}
+} */
 
 * { margin:0; padding:0; box-sizing:border-box;}
 
