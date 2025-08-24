@@ -31,7 +31,6 @@ body {
 
 .nav-list li a,
 .social-list li a {
-  font-size:1rem;
   padding: 4px 2px;
   margin: auto 2rem;
   font-family: Geist Mono, mono;
@@ -184,11 +183,23 @@ h3 { font-size:1.5rem; color:#666; }
     width: calc(50% - 20px);
   }
   h2 {
-    font-size: 6rem
+    font-size: 6rem;
+  }
+  .impact {
+    font-size: 1rem;
+  }
+  .impact-links {
+    font-size: 1rem;
   }
   :root {
     --fancybox-button-size: 48px; /* default is 36px */
   }
+  .nav-list li a,
+  .social-list li a {
+    margin: auto 0.6rem;
+    font-size: 0.9rem;
+  }
+  .site-header h2 { font-size: 0.9rem;}
 }
 
 @media (max-width: 650px) {

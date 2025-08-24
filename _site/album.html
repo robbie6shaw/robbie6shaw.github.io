@@ -25,21 +25,25 @@
 </head>
 <body>
 
-    <script>
+<script>
   document.addEventListener("DOMContentLoaded", function () {
     const grid = document.querySelector('.photo-grid');
+    let msnry;
     imagesLoaded(grid, function () {
-      new Masonry(grid, {
+      msnry = new Masonry(grid, {
         itemSelector: '.pcard',
         percentPosition: true,
         gutter: 10
       });
     });
+    window.addEventListener('resize', function () {
+      if (msnry) msnry.layout();
+    });
   });
 
   // Optional: Initialize Fancybox (auto for [data-fancybox] links)
   Fancybox.bind("[data-fancybox]", {});
-  </script>
+</script>
 
   <header class="site-header">
   <nav>
